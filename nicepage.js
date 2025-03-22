@@ -4037,8 +4037,7 @@
       i(window).on("load", function () {
         var t;
         if (
-            // true
-          !/Android|webOS|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
             navigator.userAgent || navigator.vendor || window.opera
           )
         ) {
@@ -4109,7 +4108,7 @@
             (Qt = ( 
               t.mobileCheck ||
               function () {
-                return /Android|iPad|iPod|BlackBerry/i.test(
+                return /Android|iPhone|iPad|iPod|BlackBerry/i.test(
                   navigator.userAgent || navigator.vendor || e.opera
                 );
               }
