@@ -4037,10 +4037,10 @@
       i(window).on("load", function () {
         var t;
         if (
-            true
-        //   !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        //     navigator.userAgent || navigator.vendor || window.opera
-        //   )
+            // true
+          !/Android|webOS|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent || navigator.vendor || window.opera
+          )
         ) {
           var items = i(".u-parallax");
           if (items.length > 0) {
@@ -4106,13 +4106,13 @@
             (Gt = false !== t.smoothScrolling),
             (jt = t.smoothScrollingDuration || k),
             (Kt = { targetTop: Mt.getScrollTop() }),
-            (Qt = ( false
-            //   t.mobileCheck ||
-            //   function () {
-            //     return /Android|iPhone|iPad|iPod|BlackBerry/i.test(
-            //       navigator.userAgent || navigator.vendor || e.opera
-            //     );
-            //   }
+            (Qt = ( 
+              t.mobileCheck ||
+              function () {
+                return /Android|iPad|iPod|BlackBerry/i.test(
+                  navigator.userAgent || navigator.vendor || e.opera
+                );
+              }
             )()))
           ) {
             if ((Pt = n.getElementById(t.skrollrBody || I))) mt();
