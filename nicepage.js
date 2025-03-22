@@ -4037,15 +4037,16 @@
       i(window).on("load", function () {
         var t;
         if (
-          !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent || navigator.vendor || window.opera
-          )
+            true
+        //   !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        //     navigator.userAgent || navigator.vendor || window.opera
+        //   )
         ) {
           var items = i(".u-parallax");
           if (items.length > 0) {
             items.each(function () {
               var t = i(this);
-              if (
+              if ( 
                 (t.css("background-attachment", "fixed"),
                 t.hasClass("u-shading"))
               )
@@ -4105,13 +4106,13 @@
             (Gt = false !== t.smoothScrolling),
             (jt = t.smoothScrollingDuration || k),
             (Kt = { targetTop: Mt.getScrollTop() }),
-            (Qt = (
-              t.mobileCheck ||
-              function () {
-                return /Android|iPhone|iPad|iPod|BlackBerry/i.test(
-                  navigator.userAgent || navigator.vendor || e.opera
-                );
-              }
+            (Qt = ( false
+            //   t.mobileCheck ||
+            //   function () {
+            //     return /Android|iPhone|iPad|iPod|BlackBerry/i.test(
+            //       navigator.userAgent || navigator.vendor || e.opera
+            //     );
+            //   }
             )()))
           ) {
             if ((Pt = n.getElementById(t.skrollrBody || I))) mt();
